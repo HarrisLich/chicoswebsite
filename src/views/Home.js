@@ -63,7 +63,7 @@ export default function Home() {
                 </div>
                 <Login />
                 <Register />
-                <svg width="695.001" height="66.6" viewBox="0 0 695.001 66.6" xmlns="http://www.w3.org/2000/svg">
+                <svg width="695.001" height="66.6" className="w-[80%]" viewBox="0 0 695.001 66.6" xmlns="http://www.w3.org/2000/svg">
                     <SVGPath />
                 </svg>
                 <div className="mt-[4rem] gap-[4rem] w-full flex items-center justify-center flex-row text-white">
@@ -77,7 +77,7 @@ export default function Home() {
             <div className="w-full h-full flex flex-col items-center justify-center font-[pt]" style={{ height: "calc(100vh)" }}>
                 <Login />
                 <Register />
-                <svg width="695.001" height="66.6" viewBox="0 0 695.001 66.6" xmlns="http://www.w3.org/2000/svg">
+                <svg width="695.001" height="66.6" className="w-[80%]" viewBox="0 0 695.001 66.6" xmlns="http://www.w3.org/2000/svg">
                     <SVGPath />
                 </svg>
                 <div className="mt-[4rem] gap-[4rem] w-full flex items-center justify-center flex-row text-white">
