@@ -31,7 +31,7 @@ export default function Login() {
     }
 
     const onSubmit = ()=>{
-        axios.post("http://localhost:5001/api/login", {username: username, password: password}).then((res)=>{
+        axios.post("http://chicos-backend.netlify.app/api/login", {username: username, password: password}).then((res)=>{
             console.log(res.data)
             if(res.data === "exists") {
                 localStorage.setItem('token', username)

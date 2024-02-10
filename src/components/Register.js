@@ -15,7 +15,7 @@ export default function(){
 
     const onSubmit = (e)=>{
         e.preventDefault()
-        axios.post("http://localhost:5001/api/register", {username: username, password: password})
+        axios.post("http://chicos-backend.netlify.app/api/register", {username: username, password: password})
         closeRegister()
     }
 

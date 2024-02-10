@@ -23,7 +23,7 @@ export default function ViewOrders() {
 
 
     React.useEffect(() => {
-        axios.post("http://localhost:5001/api/orders").then((res) => {
+        axios.post("http://chicos-backend.netlify.app/api/orders").then((res) => {
             setOrders(res.data)
         })
     }, [])
@@ -101,7 +101,7 @@ export default function ViewOrders() {
                                 <div className="absolute right-1 bottom-1">
                                     <button onClick={(e) => {
                                         e.preventDefault()
-                                        axios.delete("http://localhost:5001/api/deleteForm", {
+                                        axios.delete("http://chicos-backend.netlify.app/api/deleteForm", {
                                             data: {
                                                 val: element._id
                                             }

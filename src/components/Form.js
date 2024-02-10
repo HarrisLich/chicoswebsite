@@ -41,7 +41,7 @@ export default function Form() {
     const user = localStorage.getItem('token')
 
     const onSubmit = () => {
-        axios.post("http://localhost:5001/api/submitForm", {
+        axios.post("http://chicos-backend.netlify.app/api/submitForm", {
             requests: requests,
             firstName: firstName,
             lastName: lastName,
