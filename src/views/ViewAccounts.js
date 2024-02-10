@@ -17,6 +17,19 @@ export default function ViewAccount() {
         })
     }, [])
 
+    const removeRefferal = (e, elem, event)=>{
+        event.preventDefault()
+        axios.delete("http://localhost:5001/api/deleteRefferal", {
+            data: {
+                user: elem._id,
+                reffered: e
+            }
+        }).then((res)=>{
+            console.log(res)
+        })
+        window.location.reload(true)
+    }
+
     if (user && user === "chico") {
         return (
             <div className="w-full flex flex-col font-[pt]">
@@ -40,6 +53,14 @@ export default function ViewAccount() {
                                     axios.post("http://localhost:5001/api/updateAccount", elem)
                                     window.location.reload(true)
                                 }} className="absolute right-0 top-[50%]">{elem.marked ? <FaCheck color="green"/> : <ImCross color="red"/> }</button>
+                                <div className="w-full flex-row gap-2">
+                                    <h1 className="flex flex-row gap-2">Refferals ({elem.reffered.length}): 
+                                    {elem.reffered.map((e)=>{
+                                        return(<button onClick={(event)=> removeRefferal(e, elem, event)}>{e}</button>)
+                                    })}
+                                    </h1>
+                                    
+                                </div>
                             </div>
                         )
                     }) : null}

@@ -4,6 +4,8 @@ import SVGPath from '../components/SVGPath'
 import Login from '../components/Login'
 import Register from '../components/Register'
 import Form from '../components/Form'
+import Refferal from '../components/Refferal'
+import Pricing from '../components/Pricing'
 
 export default function Home() {
 
@@ -27,10 +29,16 @@ export default function Home() {
     const openForm = ()=>{
         document.getElementById("form").classList.remove("hidden")
     }
+    const openRefferal = ()=>{
+        document.getElementById("refferal").classList.remove("hidden")
+    }
+    const openPricing = ()=>{
+        document.getElementById("pricing").classList.remove("hidden")
+    }
 
     if (user && user === "chico") {
         return (
-            <div className="w-full h-full flex flex-col items-center justify-center " style={{ height: "calc(100vh)" }}>
+            <div className="w-full h-full flex flex-col items-center justify-center" style={{height: "calc(100vh)"}}>
                 <div className="left-5 absolute text-xs md:text-base text-white top-5 font-[pt]">
                     Logged in as: {user}
                 </div>
@@ -44,11 +52,15 @@ export default function Home() {
                 <Login />
                 <Register />
                 <Form/>
+                <Refferal></Refferal>
+                <Pricing></Pricing>
                 <svg width="695.001" height="66.6" className="w-[80%]" viewBox="0 0 695.001 66.6" xmlns="http://www.w3.org/2000/svg">
                     <SVGPath />
                 </svg>
-                <div className="mt-[4rem] gap-[4rem] w-full flex items-center justify-center flex-row text-white">
-                    <button onClick={() => openForm()} className="px-6 py-2 border border-white rounded transition-all duration-300 hover:bg-white hover:text-black font-[pt]">Open Form</button>
+                <div className="mt-[4rem] md:gap-[4rem] gap-[20px] w-full flex items-center justify-center flex-row text-white font-[pt]">
+                    <button onClick={() => openForm()} className="md:px-6 px-4 py-2 border border-white rounded transition-all duration-300 hover:bg-white hover:text-black">Open Form</button>
+                    <button onClick={() => openRefferal()} className="md:px-6 px-4 py-2 border border-white rounded transition-all duration-300 hover:bg-white hover:text-black">Add Refferal</button>
+                    <button onClick={() => openPricing()} className="md:px-6 px-4 py-2 border border-white rounded transition-all duration-300 hover:bg-white hover:text-black">Pricing</button>
                 </div>
             </div>
         )
@@ -63,11 +75,16 @@ export default function Home() {
                 </div>
                 <Login />
                 <Register />
+                <Form/>
+                <Refferal></Refferal>
+                <Pricing></Pricing>
                 <svg width="695.001" height="66.6" className="w-[80%]" viewBox="0 0 695.001 66.6" xmlns="http://www.w3.org/2000/svg">
                     <SVGPath />
                 </svg>
-                <div className="mt-[4rem] gap-[4rem] w-full flex items-center justify-center flex-row text-white">
-                    <button onClick={() => openForm()} className="px-6 py-2 border border-white rounded transition-all duration-300 hover:bg-white hover:text-black">Open Form</button>
+                <div className="mt-[4rem] md:gap-[4rem] gap-[20px] w-full flex items-center justify-center flex-row text-white font-[pt]">
+                    <button onClick={() => openForm()} className="md:px-6 px-4 py-2 border border-white rounded transition-all duration-300 hover:bg-white hover:text-black">Open Form</button>
+                    <button onClick={() => openRefferal()} className="md:px-6 px-4 py-2 border border-white rounded transition-all duration-300 hover:bg-white hover:text-black">Add Refferal</button>
+                    <button onClick={() => openPricing()} className="md:px-6 px-4 py-2 border border-white rounded transition-all duration-300 hover:bg-white hover:text-black">Pricing</button>
                 </div>
             </div>
         )
