@@ -18,7 +18,7 @@ export default function () {
 
     const submitRefferal = (e)=>{
         e.preventDefault()
-        axios.post("http://chicos-backend.netlify.app/api/submitRefferal", {user: user, refferal: refferal}).then((res)=>{
+        axios.post("https://chicos-backend.netlify.app/api/submitRefferal", {user: user, refferal: refferal}).then((res)=>{
             console.log(res)
         })
         closeMenu(e)

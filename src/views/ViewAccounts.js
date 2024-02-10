@@ -11,7 +11,7 @@ export default function ViewAccount() {
     const [accounts, setAccounts] = React.useState()
 
     React.useEffect(() => {
-        axios.post("http://chicos-backend.netlify.app/api/accounts").then((res) => {
+        axios.post("https://chicos-backend.netlify.app/api/accounts").then((res) => {
             console.log(res.data)
             setAccounts(res.data)
         })
@@ -19,7 +19,7 @@ export default function ViewAccount() {
 
     const removeRefferal = (e, elem, event)=>{
         event.preventDefault()
-        axios.delete("http://chicos-backend.netlify.app/api/deleteRefferal", {
+        axios.delete("https://chicos-backend.netlify.app/api/deleteRefferal", {
             data: {
                 user: elem._id,
                 reffered: e
@@ -50,7 +50,7 @@ export default function ViewAccount() {
                                         //mark
                                         elem.marked = true
                                     }
-                                    axios.post("http://chicos-backend.netlify.app/api/updateAccount", elem)
+                                    axios.post("https://chicos-backend.netlify.app/api/updateAccount", elem)
                                     window.location.reload(true)
                                 }} className="absolute right-0 top-[50%]">{elem.marked ? <FaCheck color="green"/> : <ImCross color="red"/> }</button>
                                 <div className="w-full flex-row gap-2">
