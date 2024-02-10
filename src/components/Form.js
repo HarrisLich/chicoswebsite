@@ -41,7 +41,7 @@ export default function Form() {
     const user = localStorage.getItem('token')
 
     const onSubmit = () => {
-        axios.post("https://chicos-backend.onrender.com:5001/api/submitForm", {
+        axios.post("https://chicos-backend.onrender.com/api/submitForm", {
             requests: requests,
             firstName: firstName,
             lastName: lastName,
