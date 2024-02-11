@@ -41,8 +41,9 @@ export default function ViewAccount() {
             elem.marked = true
         }
         axios.post("https://chicos-backend.onrender.com/api/updateAccount", elem).then((res)=>{
-            window.location.reload(true)
+            console.log(res)
         })
+        window.location.reload(true)
         
     }
 
