@@ -84,7 +84,7 @@ export default function Form() {
             dob: date
         }).then((res)=>{
             console.log(res.data)
-            
+            window.location.reload(true)
         })
     }
 
