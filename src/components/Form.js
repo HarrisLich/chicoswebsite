@@ -258,7 +258,7 @@ export default function Form() {
                         </div>
                     </div>
                     <div className="w-full flex items-start justify-center">
-                        <button onClick={(e)=> onSubmit(e)} className="px-6 py-2 hover:bg-green-300/30 transition-all duration-300 text-green-500">Submit</button>
+                        <button onMouseDown={(e)=> onSubmit(e)} className="px-6 py-2 hover:bg-green-300/30 transition-all duration-300 text-green-500">Submit</button>
                     </div>
                 </div>
             </div>
