@@ -82,9 +82,10 @@ export default function Form() {
             signature: signature,
             user: user,
             dob: date
+        }).then((res)=>{
+            console.log(res.data)
+            closeForm()
         })
-
-        closeForm()
     }
 
 
