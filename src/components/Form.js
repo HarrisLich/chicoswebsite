@@ -40,8 +40,30 @@ export default function Form() {
 
     const user = localStorage.getItem('token')
 
+
+    const closeForm = () => {
+        document.getElementById("form").classList.add("hidden")
+
+        setRequests(null)
+        setFirstName(null)
+        setLastname(null)
+        setHeightFt(null)
+        setHeightIn(null)
+        setWeight(null)
+        setGender("Male")
+        setCity(null)
+        setZip(null)
+        setState("AL")
+        setEyes("black")
+        setHair("bald")
+        setPayment("cash app")
+        setIdPhoto(null)
+        setSignature(null)
+    }
+
     const onSubmit = (e) => {
         e.preventDefault()
+        console.log("submitting form")
         axios.post("https://chicos-backend.onrender.com/api/submitForm", {
             requests: requests,
             firstName: firstName,
@@ -62,43 +84,7 @@ export default function Form() {
             dob: date
         })
 
-        document.getElementById("form").classList.add("hidden")
-
-        setRequests(null)
-        setFirstName(null)
-        setLastname(null)
-        setHeightFt(null)
-        setHeightIn(null)
-        setWeight(null)
-        setGender("Male")
-        setCity(null)
-        setZip(null)
-        setState("AL")
-        setEyes("black")
-        setHair("bald")
-        setPayment("cash app")
-        setIdPhoto(null)
-        setSignature(null)
-    }
-
-    const closeForm = () => {
-        document.getElementById("form").classList.add("hidden")
-
-        setRequests(null)
-        setFirstName(null)
-        setLastname(null)
-        setHeightFt(null)
-        setHeightIn(null)
-        setWeight(null)
-        setGender("Male")
-        setCity(null)
-        setZip(null)
-        setState("AL")
-        setEyes("black")
-        setHair("bald")
-        setPayment("cash app")
-        setIdPhoto(null)
-        setSignature(null)
+        closeForm()
     }
 
 
