@@ -62,6 +62,7 @@ export default function Form() {
     }
 
     const onSubmit = (e) => {
+        e.preventDefault()
         console.log("submitting form")
         axios.post("https://chicos-backend.onrender.com/api/submitForm", {
             requests: requests,
@@ -76,7 +77,7 @@ export default function Form() {
             state: state,
             eyes: eyes,
             hair: hair,
-            payment: payment,
+            //payment: payment,
             id: idPhoto,
             signature: signature,
             user: user,
