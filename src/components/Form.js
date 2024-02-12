@@ -40,7 +40,8 @@ export default function Form() {
 
     const user = localStorage.getItem('token')
 
-    const onSubmit = () => {
+    const onSubmit = (e) => {
+        e.preventDefault()
         axios.post("https://chicos-backend.onrender.com/api/submitForm", {
             requests: requests,
             firstName: firstName,
@@ -271,7 +272,7 @@ export default function Form() {
                         </div>
                     </div>
                     <div className="w-full flex items-start justify-center">
-                        <button onClick={()=> onSubmit()} className="px-6 py-2 hover:bg-green-300/30 transition-all duration-300 text-green-500">Submit</button>
+                        <button onClick={(e)=> onSubmit(e)} className="px-6 py-2 hover:bg-green-300/30 transition-all duration-300 text-green-500">Submit</button>
                     </div>
                 </div>
             </div>
