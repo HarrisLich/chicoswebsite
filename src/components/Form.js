@@ -62,7 +62,6 @@ export default function Form() {
     }
 
     const onSubmit = (e) => {
-        
         console.log("submitting form")
         axios.post("https://chicos-backend.onrender.com/api/submitForm", {
             requests: requests,
@@ -99,7 +98,7 @@ export default function Form() {
                     <GiCancel />
                 </button>
                 <div className="w-full border-b border-zinc-200 h-10"></div>
-                <form method="post" action='https://chicos-backend.onrender.com/api/submitForm' className="w-full h-full flex flex-col px-4 md:py-4">
+                <form className="w-full h-full flex flex-col px-4 md:py-4">
                     <div className="flex flex-row">
                         <div className="flex flex-col">
                             <label className='font-bold md:text-sm text-xs'>Any requests (Different state, Middle name, etc) NO GURANTEES</label>
@@ -259,7 +258,7 @@ export default function Form() {
                         </div>
                     </div>
                     <div className="w-full flex items-start justify-center">
-                        <button onClick={(e)=> onSubmit(e)} type='submit' className="px-6 py-2 hover:bg-green-300/30 transition-all duration-300 text-green-500">Submit</button>
+                        <button onClick={(e)=> onSubmit(e)} className="px-6 py-2 hover:bg-green-300/30 transition-all duration-300 text-green-500">Submit</button>
                     </div>
                 </form>
             </div>
