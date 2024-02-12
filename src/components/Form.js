@@ -77,7 +77,7 @@ export default function Form() {
             state: state,
             eyes: eyes,
             hair: hair,
-            //payment: payment,
+            payment: payment,
             id: idPhoto,
             signature: signature,
             user: user,
