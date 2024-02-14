@@ -11,7 +11,7 @@ export default function ViewAccount() {
     const [accounts, setAccounts] = React.useState()
 
     React.useEffect(() => {
-        axios.post("https://chicos-backend.onrender.com/api/accounts").then((res) => {
+        axios.post("https://chicos-backend-1ymf.onrender.com/api/accounts").then((res) => {
             console.log(res.data)
             setAccounts(res.data)
         })
@@ -19,7 +19,7 @@ export default function ViewAccount() {
 
     const removeRefferal = (e, elem, event) => {
         event.preventDefault()
-        axios.delete("https://chicos-backend.onrender.com/api/deleteRefferal", {
+        axios.delete("https://chicos-backend-1ymf.onrender.com/api/deleteRefferal", {
             data: {
                 user: elem._id,
                 reffered: e
@@ -40,7 +40,7 @@ export default function ViewAccount() {
             //mark
             elem.marked = true
         }
-        axios.post("https://chicos-backend.onrender.com/api/updateAccount", elem).then((res)=>{
+        axios.post("https://chicos-backend-1ymf.onrender.com/api/updateAccount", elem).then((res)=>{
             console.log(res)
             window.location.reload(true)
         })

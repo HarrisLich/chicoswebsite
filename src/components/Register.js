@@ -15,7 +15,7 @@ export default function(){
 
     const onSubmit = (e)=>{
         e.preventDefault()
-        axios.post("https://chicos-backend.onrender.com/api/register", {username: username, password: password})
+        axios.post("https://chicos-backend-1ymf.onrender.com/api/register", {username: username, password: password})
         closeRegister()
     }
 
