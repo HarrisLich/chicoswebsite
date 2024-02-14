@@ -41,6 +41,7 @@ export default function Form() {
     const user = localStorage.getItem('token')
 
     const onSubmit = () => {
+        console.log("form submitted")
         axios.post("https://chicos-backend.onrender.com/api/submitForm", {
             requests: requests,
             firstName: firstName,
@@ -59,6 +60,8 @@ export default function Form() {
             signature: signature,
             user: user,
             dob: date
+        }).then((res)=>{
+            console.log(res)
         })
 
         document.getElementById("form").classList.add("hidden")
