@@ -2,7 +2,9 @@ import { type } from "@testing-library/user-event/dist/type"
 import axios from "axios"
 import React from "react"
 import { IoMdDownload } from "react-icons/io";
-import { IoIosArrowRoundBack } from "react-icons/io";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+
+let startIndex = 0;
 
 
 export default function ViewOrders() {
@@ -19,18 +21,34 @@ export default function ViewOrders() {
 
     const user = localStorage.getItem('token')
 
-
-
-
     React.useEffect(() => {
-        axios.post("https://chicos-backend-1ymf.onrender.com/api/orders").then((res) => {
+        axios.post("https://chicos-backend-1ymf.onrender.com/api/orders", {startIndex: 0}).then((res) => {
             setOrders(res.data)
         })
     }, [])
+
+    const changeOrders = (e, dir) => {
+        e.preventDefault()
+        
+        if(dir === '<' && startIndex - 10 >= 0){
+            startIndex -= 10
+        }else if(dir === '>'){
+            startIndex += 10
+        }
+        
+        axios.post("https://chicos-backend-1ymf.onrender.com/api/orders", {startIndex: startIndex}).then((res)=>{
+            console.log(res)
+            console.log(startIndex)
+            setOrders(res.data)
+        })
+    }
+
     if (user && user === "chico") {
         return (
             <div className="w-full h-full flex flex-col font-[pt]">
-                <a href="/" className="absolute left-1 top-1 text-5xl text-white"><IoIosArrowRoundBack></IoIosArrowRoundBack></a>
+                <a href="/" className="absolute place-self-center text-white">Home</a>
+                <button onClick={(e)=> changeOrders(e, '<')} className="absolute left-1 top-1 text-5xl text-white"><IoIosArrowRoundBack></IoIosArrowRoundBack></button>
+                <button onClick={(e)=> changeOrders(e, '>')} className="absolute right-1 top-1 text-5xl text-white"><IoIosArrowRoundForward></IoIosArrowRoundForward></button>
                 <div className="w-full flex items-center justify-center text-white font-bold text-4xl mt-[3rem]">Orders</div>
                 <div className="w-full flex flex-col mt-[4rem] px-4">
                     {orders ? orders.map((element) => {

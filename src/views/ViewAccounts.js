@@ -120,7 +120,7 @@ export default function ViewAccount() {
                         return (
 
                             <div className="flex py-4 relative text-white flex-col w-full border-b border-1 border-zinc-900">
-                                <button onClick={(event) => showForm(event, elem)} className="font-bold text-xl">{elem.username}</button>
+                                <h1 className="font-bold text-xl">{elem.username}</h1>
                                 <button onClick={(event) => markAccount(event, elem)} className="absolute right-0 top-[50%]">{elem.marked ? <FaCheck color="green" /> : <ImCross color="red" />}</button>
                                 {!(elem.username === "chico") ? <button onClick={(event)=> deleteAccount(event, elem)} className="text-red-500 mt-4">Delete Account</button>: null}
                                 
