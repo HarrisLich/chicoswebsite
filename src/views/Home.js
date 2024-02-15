@@ -44,7 +44,6 @@ export default function Home() {
                 </div>
                 <div className="left-[35%] font-[pt] md:left-[40%] absolute justify-between flex text-xs md:text-base text-white top-5 md:gap-4 gap-2">
                     <a href="/accounts">Manage Accounts</a>
-                    <a href="/orders">Manage Orders</a>
                 </div>
                 <div className="absolute text-xs md:text-base text-white md:right-5 right-1 top-5">
                     <button className="font-[pt]" onClick={() => logout()}>Logout</button>

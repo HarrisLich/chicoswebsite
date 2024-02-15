@@ -14,10 +14,6 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: "/orders",
-    element: <ViewOrders />
-  },
-  {
     path: "/accounts",
     element: <ViewAccount/>
   }
