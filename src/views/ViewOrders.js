@@ -114,7 +114,7 @@ export default function ViewOrders() {
                                         </a>
                                     </div>
                                     <div className="flex font-bold flex-row ml-4">Signature:
-                                        <a className="ml-2 h-full items-center flex hover:text-green-300 duration-300 transition-all" href={element.id} download={element.user + "Signature"}>
+                                        <a className="ml-2 h-full items-center flex hover:text-green-300 duration-300 transition-all" href={element.signature} download={element.user + "Signature"}>
                                             <IoMdDownload size={20} />
                                         </a>
                                     </div>
