@@ -100,6 +100,9 @@ export default function ViewOrders() {
                                     <div className="flex font-bold flex-row">Hair:
                                         <div className="font-normal ml-2">{element.hair}</div>
                                     </div>
+                                    <div className="flex font-bold flex-row ml-4">Weight:
+                                        <div className="font-normal ml-2">{element.weight}</div>
+                                    </div>
                                     <div className="flex font-bold flex-row ml-4">Payment:
                                         <div className="font-normal ml-2">{element.payment}</div>
                                     </div>
