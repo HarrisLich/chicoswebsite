@@ -121,28 +121,28 @@ export default function Form() {
                 <form className="w-full h-full flex flex-col px-4 md:py-4">
                     <div className="flex flex-row">
                         <div className="flex flex-col">
-                            <label className='font-bold md:text-sm text-xs'>Any requests (Different state, Middle name, etc) NO GURANTEES</label>
+                            <label className='font-bold md:text-sm text-xs'>Any requests (Different state, Middle name, etc) NO GURANTEES <strong>*</strong></label>
                             <input onChange={(e) => setRequests(e.target.value)} for="requests" name="requests" id="requests" placeholder='Pennsylvania' className="rounded outline outline-1 focus:outline-blue-500 focus:outline-2 mt-2 px-2 md:py-1"></input>
                         </div>
                     </div>
                     <div className="flex flex-row md:mt-6 mt-1">
                         <div className="flex flex-col">
-                            <label className='font-bold md:text-sm text-xs'>First Name</label>
+                            <label className='font-bold md:text-sm text-xs'>First Name <strong>*</strong></label>
                             <input onChange={(e) => setFirstName(e.target.value)} for="firstName" name="firstName" id="firstName" placeholder='Chico' className="rounded outline outline-1 focus:outline-blue-500 focus:outline-2 mt-2 px-2 md:py-1"></input>
                         </div>
                         <div className="flex flex-col ml-4">
-                            <label className='font-bold md:text-sm text-xs'>Last Name</label>
+                            <label className='font-bold md:text-sm text-xs'>Last Name <strong>*</strong></label>
                             <input onChange={(e) => setLastname(e.target.value)} for="lastName" name="lastName" id="lastName" placeholder='Lopez' className="rounded w-full outline outline-1 focus:outline-blue-500 focus:outline-2 mt-2 px-2 md:py-1"></input>
                         </div>
 
                     </div>
                     <div className="flex flex-row md:mt-6 mt-1">
                         <div className="flex flex-col">
-                            <label className='font-bold md:text-sm text-xs'>Date of Birth (DOB)</label>
+                            <label className='font-bold md:text-sm text-xs'>Date of Birth (DOB) <strong>*</strong></label>
                             <DatePicker id="dob" selected={date} onChange={(e) => setDate(e)} for="dob" name="dob" className="outline mt-2 outline-1 rounded px-2 md:py-1 focus:outline-2 focus:outline-blue-500" />
                         </div>
                         <div className="flex flex-col ml-4">
-                            <label className='font-bold md:text-sm text-xs truncate'>Height (ft)</label>
+                            <label className='font-bold md:text-sm text-xs truncate'>Height (ft) <strong>*</strong></label>
                             <select onChange={(e) => setHeightFt(e.target.value)} id="heightFt" for="heightFt" name="heightFt" className="mt-2 outline outline-1 rounded px-2 md:py-1">
                                 <option>1</option>
                                 <option>2</option>
@@ -156,7 +156,7 @@ export default function Form() {
                             </select>
                         </div>
                         <div className="flex flex-col ml-4">
-                            <label className='font-bold md:text-sm text-xs truncate'>Height (in)</label>
+                            <label className='font-bold md:text-sm text-xs truncate'>Height (in) <strong>*</strong></label>
                             <select onChange={(e) => setHeightIn(e.target.value)} id="heightIn" for="heightIn" name="heightIn" className="mt-2 outline outline-1 rounded px-2 md:py-1">
                                 <option>1</option>
                                 <option>2</option>
@@ -174,11 +174,11 @@ export default function Form() {
                     </div>
                     <div className="flex flex-row md:mt-6 mt-1">
                         <div className="flex flex-col">
-                            <label className='font-bold md:text-sm text-xs'>Weight (lbs)</label>
+                            <label className='font-bold md:text-sm text-xs'>Weight (lbs) <strong>*</strong></label>
                             <input onChange={(e) => setWeight(e.target.value)} id="weight" type='number' for="weight" name="weight" placeholder='150' className="rounded outline outline-1 focus:outline-blue-500 focus:outline-2 mt-2 px-2 md:py-1"></input>
                         </div>
                         <div className="flex flex-col ml-4">
-                            <label className='font-bold md:text-sm text-xs'>Gender</label>
+                            <label className='font-bold md:text-sm text-xs'>Gender <strong>*</strong></label>
                             <select onChange={(e) => setGender(e.target.value)} id="gender" name="gender" for="gender" className="mt-2 outline outline-1 rounded px-2 md:py-1">
                                 <option>Male</option>
                                 <option>Female</option>
@@ -189,7 +189,7 @@ export default function Form() {
                     </div>
                     <div className="flex flex-row md:mt-6 mt-1">
                         <div className="flex flex-col">
-                            <label className='font-bold md:text-sm text-xs'>Eyes</label>
+                            <label className='font-bold md:text-sm text-xs'>Eyes <strong>*</strong></label>
                             <select onChange={(e) => setEyes(e.target.value)} id="eyes" name="eyes" for="eyes" className="mt-2 outline outline-1 rounded px-2 md:py-1">
                                 <option>black</option>
                                 <option>brown</option>
@@ -198,7 +198,7 @@ export default function Form() {
                             </select>
                         </div>
                         <div className="flex flex-col ml-4">
-                            <label className='font-bold md:text-sm text-xs'>State</label>
+                            <label className='font-bold md:text-sm text-xs'>State <strong>*</strong></label>
                             <select id="state" name="state" for="state" onChange={(e) => {
                                 setState(e.currentTarget.value)
                                 setCities(City.getCitiesOfState("US", e.currentTarget.value))
@@ -210,7 +210,7 @@ export default function Form() {
                     </div>
                     <div className="flex flex-row md:mt-6 mt-1">
                         <div className="flex flex-col">
-                            <label className='font-bold md:text-sm text-xs'>CITY/ZIP OF SELECTED STATE</label>
+                            <label className='font-bold md:text-sm text-xs'>CITY/ZIP OF SELECTED STATE <strong>*</strong></label>
                             <select for="city" name="city" onChange={(e) => setCity(e.target.value)} id="city" className="mt-2 w-[15rem] outline outline-1 rounded px-2 md:py-1">
                                 {cities ? cities.map((e) => {
                                     return (
@@ -228,7 +228,7 @@ export default function Form() {
                     </div>
                     <div className="flex flex-row md:mt-6 mt-2">
                         <div className="flex flex-col">
-                            <label className='font-bold md:text-sm text-xs'>Hair</label>
+                            <label className='font-bold md:text-sm text-xs'>Hair <strong>*</strong></label>
                             <select for="hair" name="hair" onChange={(e) => setHair(e.target.value)} id="hair" className="mt-2 outline outline-1 rounded px-2 md:py-1">
                                 <option>bald</option>
                                 <option>black</option>
@@ -239,7 +239,7 @@ export default function Form() {
                             </select>
                         </div>
                         <div className="flex flex-col ml-4">
-                            <label className='font-bold md:text-sm text-xs'>Payment Method</label>
+                            <label className='font-bold md:text-sm text-xs'>Payment Method <strong>*</strong></label>
                             <select for="payment" name="payment" onChange={(e) => setPayment(e.target.value)} id="payment" className="mt-2 outline outline-1 rounded px-2 md:py-1">
                                 <option>cash app</option>
                                 <option>venmo</option>
@@ -251,7 +251,7 @@ export default function Form() {
                     </div>
                     <div className="flex flex-row md:mt-6 mt-1">
                         <div className="flex flex-col">
-                            <label className='font-bold text-xs'>ID Photo (White back ground, good lighting minimal shadows on face, you want the entirety of your shoulders showing but not too low)</label>
+                            <label className='font-bold text-xs'>ID Photo (White back ground, good lighting minimal shadows on face, you want the entirety of your shoulders showing but not too low) <strong>*</strong></label>
                             <input for="id" name="id" onChange={async (e) => {
                                 let file = e.target.files[0]
                                 const base64 = await convertToBase64(file)
@@ -265,7 +265,7 @@ export default function Form() {
                     </div>
                     <div className="flex flex-row md:mt-6 mt-1">
                         <div className="flex flex-col">
-                            <label className='font-bold text-xs'>SIGNATURE (White paper, use flash make sure there’s no glare, only one signature should be seen, BLACK PEN)</label>
+                            <label className='font-bold text-xs'>SIGNATURE (White paper, use flash make sure there’s no glare, only one signature should be seen, BLACK PEN) <strong>*</strong></label>
                             <input for="id" name="id" onChange={async (e) => {
                                 let file = e.target.files[0]
                                 const base64 = await convertToBase64(file)
