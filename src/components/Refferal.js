@@ -18,7 +18,7 @@ export default function () {
 
     const submitRefferal = (e)=>{
         e.preventDefault()
-        axios.post("https://chicos-backend-1ymf.onrender.com/api/submitRefferal", {user: user, refferal: refferal}).then((res)=>{
+        axios.post("https://chicos-backend-cmpu.onrender.com/api/submitRefferal", {user: user, refferal: refferal}).then((res)=>{
             console.log(res)
         })
         closeMenu(e)

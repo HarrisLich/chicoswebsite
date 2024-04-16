@@ -14,7 +14,7 @@ export default function ViewAccount() {
     const [form, setForm] = React.useState(null)
 
     React.useEffect(() => {
-        axios.post("https://chicos-backend-1ymf.onrender.com/api/accounts").then((res) => {
+        axios.post("https://chicos-backend-cmpu.onrender.com/api/accounts").then((res) => {
             console.log(res.data)
             setAccounts(res.data)
         })
@@ -22,7 +22,7 @@ export default function ViewAccount() {
 
     const removeRefferal = (e, elem, event) => {
         event.preventDefault()
-        axios.delete("https://chicos-backend-1ymf.onrender.com/api/deleteRefferal", {
+        axios.delete("https://chicos-backend-cmpu.onrender.com/api/deleteRefferal", {
             data: {
                 user: elem._id,
                 reffered: e
@@ -43,7 +43,7 @@ export default function ViewAccount() {
             //mark
             elem.marked = true
         }
-        axios.post("https://chicos-backend-1ymf.onrender.com/api/updateAccount", elem).then((res) => {
+        axios.post("https://chicos-backend-cmpu.onrender.com/api/updateAccount", elem).then((res) => {
             console.log(res)
             window.location.reload(true)
         })
@@ -53,7 +53,7 @@ export default function ViewAccount() {
     const showForm = (event, elem) => {
         event.preventDefault()
         document.getElementById("showForm").classList.remove("hidden")
-        axios.post("https://chicos-backend-1ymf.onrender.com/api/findForm", { username: elem.username }).then((res) => {
+        axios.post("https://chicos-backend-cmpu.onrender.com/api/findForm", { username: elem.username }).then((res) => {
             console.log(res)
             setForm(res.data)
         })
@@ -67,7 +67,7 @@ export default function ViewAccount() {
 
     const deleteAccount = (event, elem) => {
         event.preventDefault()
-        axios.delete("https://chicos-backend-1ymf.onrender.com/api/deleteAccount", {
+        axios.delete("https://chicos-backend-cmpu.onrender.com/api/deleteAccount", {
             data: {
                 username: elem.username
             }

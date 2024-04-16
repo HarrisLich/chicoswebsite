@@ -32,7 +32,7 @@ export default function Login() {
 
     const onSubmit = (e)=>{
         e.preventDefault()
-        axios.post("https://chicos-backend-1ymf.onrender.com/api/login", {username: username, password: password}).then((res)=>{
+        axios.post("https://chicos-backend-cmpu.onrender.com/api/login", {username: username, password: password}).then((res)=>{
             console.log(res.data)
             if(res.data === "exists") {
                 localStorage.setItem('token', username)

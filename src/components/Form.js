@@ -14,11 +14,11 @@ export default function Form() {
     const [requests, setRequests] = React.useState(null)
     const [firstName, setFirstName] = React.useState(null)
     const [lastName, setLastname] = React.useState(null)
-    const [heightFt, setHeightFt] = React.useState(null)
-    const [heightIn, setHeightIn] = React.useState(null)
+    const [heightFt, setHeightFt] = React.useState(1)
+    const [heightIn, setHeightIn] = React.useState(1)
     const [gender, setGender] = React.useState("Male")
     const [zip, setZip] = React.useState(null)
-    const [city, setCity] = React.useState(null)
+    const [city, setCity] = React.useState("Abbottstown")
     const [eyes, setEyes] = React.useState("black")
     const [hair, setHair] = React.useState("bald")
     const [payment, setPayment] = React.useState("cash app")
@@ -43,7 +43,22 @@ export default function Form() {
 
     const closeForm = () => {
         document.getElementById("form").classList.add("hidden")
-
+        document.getElementById('firstName').value = ""
+        document.getElementById('lastName').value = ""
+        document.getElementById('requests').value = ""
+        document.getElementById('heightFt').value = 1
+        document.getElementById('heightIn').value = 1
+        document.getElementById('dob').value = null
+        document.getElementById('weight').value = null
+        document.getElementById('eyes').value = 'black'
+        document.getElementById('gender').value = 'Male'
+        document.getElementById('state').value = 'PA'
+        document.getElementById('city').value = "Abbottstown"
+        document.getElementById('zip').value = null
+        document.getElementById('hair').value = 'bald'
+        document.getElementById('payment').value = 'cash app'
+        document.getElementById('signature').value = null
+        document.getElementById('id').value = null
         setRequests(null)
         setFirstName(null)
         setLastname(null)
@@ -53,7 +68,7 @@ export default function Form() {
         setGender("Male")
         setCity(null)
         setZip(null)
-        setState("AL")
+        setState("PA")
         setEyes("black")
         setHair("bald")
         setPayment("cash app")
@@ -64,7 +79,7 @@ export default function Form() {
     const onSubmit = (e) => {
         e.preventDefault()
         console.log("submitting form")
-        axios.post("https://chicos-backend-1ymf.onrender.com/api/submitForm", {
+        axios.post("https://chicos-backend-cmpu.onrender.com/api/submitForm", {
             requests: requests,
             firstName: firstName,
             lastName: lastName,
@@ -85,6 +100,11 @@ export default function Form() {
         }).then((res)=>{
             console.log(res.data)
             closeForm()
+            if(res.data.complete){
+                alert('Successfully Submitted Form')
+            }else{
+                alert('Error Submitting Form')
+            }
         })
     }
 
@@ -120,7 +140,7 @@ export default function Form() {
                     <div className="flex flex-row md:mt-6 mt-1">
                         <div className="flex flex-col">
                             <label className='font-bold md:text-sm text-xs'>Date of Birth (DOB)</label>
-                            <DatePicker selected={date} onChange={(e) => setDate(e)} for="dob" name="dob" className="outline mt-2 outline-1 rounded px-2 md:py-1 focus:outline-2 focus:outline-blue-500" />
+                            <DatePicker id="dob" selected={date} onChange={(e) => setDate(e)} for="dob" name="dob" className="outline mt-2 outline-1 rounded px-2 md:py-1 focus:outline-2 focus:outline-blue-500" />
                         </div>
                         <div className="flex flex-col ml-4">
                             <label className='font-bold md:text-sm text-xs truncate'>Height (ft)</label>
