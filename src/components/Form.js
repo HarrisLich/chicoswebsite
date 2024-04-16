@@ -48,7 +48,6 @@ export default function Form() {
         document.getElementById('requests').value = ""
         document.getElementById('heightFt').value = 1
         document.getElementById('heightIn').value = 1
-        document.getElementById('dob').value = null
         document.getElementById('weight').value = null
         document.getElementById('eyes').value = 'black'
         document.getElementById('gender').value = 'Male'
