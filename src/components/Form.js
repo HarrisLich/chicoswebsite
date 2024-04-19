@@ -78,7 +78,7 @@ export default function Form() {
     const onSubmit = (e) => {
         e.preventDefault()
         console.log("submitting form")
-        axios.post("https://chicos-backend-cmpu.onrender.com/api/submitForm", {
+        axios.post("http://34.207.130.150:8000/api/submitForm", {
             requests: requests,
             firstName: firstName,
             lastName: lastName,

@@ -22,7 +22,7 @@ export default function ViewOrders() {
     const user = localStorage.getItem('token')
 
     React.useEffect(() => {
-        axios.post("https://chicos-backend-cmpu.onrender.com/api/orders", {startIndex: 0}).then((res) => {
+        axios.post("http://34.207.130.150:8000/api/orders", {startIndex: 0}).then((res) => {
             setOrders(res.data)
         })
     }, [])
@@ -36,7 +36,7 @@ export default function ViewOrders() {
             startIndex += 10
         }
         
-        axios.post("https://chicos-backend-cmpu.onrender.com/api/orders", {startIndex: startIndex}).then((res)=>{
+        axios.post("http://34.207.130.150:8000/api/orders", {startIndex: startIndex}).then((res)=>{
             console.log(res)
             console.log(startIndex)
             setOrders(res.data)
@@ -122,7 +122,7 @@ export default function ViewOrders() {
                                 <div className="absolute right-1 bottom-1">
                                     <button onClick={(e) => {
                                         e.preventDefault()
-                                        axios.delete("https://chicos-backend-cmpu.onrender.com/api/deleteForm", {
+                                        axios.delete("http://34.207.130.150:8000/api/deleteForm", {
                                             data: {
                                                 val: element._id
                                             }
