@@ -18,7 +18,7 @@ export default function () {
 
     const submitRefferal = (e)=>{
         e.preventDefault()
-        axios.post("http://34.207.130.150:8000/api/submitRefferal", {user: user, refferal: refferal}).then((res)=>{
+        axios.post("http://localhost:8080/api/submitRefferal", {user: user, refferal: refferal}).then((res)=>{
             console.log(res)
         })
         closeMenu(e)

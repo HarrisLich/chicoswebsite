@@ -32,7 +32,7 @@ export default function Login() {
 
     const onSubmit = (e)=>{
         e.preventDefault()
-        axios.post("/login", {username: username, password: password}).then((res)=>{
+        axios.post("http://localhost:8080/api/login", {username: username, password: password}).then((res)=>{
             console.log(res.data)
             if(res.data === "exists") {
                 localStorage.setItem('token', username)

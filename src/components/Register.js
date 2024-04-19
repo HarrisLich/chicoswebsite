@@ -15,7 +15,7 @@ export default function(){
 
     const onSubmit = (e)=>{
         e.preventDefault()
-        axios.post("http://34.207.130.150:8000/api/register", {username: username, password: password})
+        axios.post("http://localhost:8080/api/register", {username: username, password: password})
         closeRegister()
     }
 

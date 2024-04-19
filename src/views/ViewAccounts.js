@@ -43,7 +43,7 @@ export default function ViewAccount() {
             //mark
             elem.marked = true
         }
-        axios.post("http://34.207.130.150:8000/api/updateAccount", elem).then((res) => {
+        axios.post("http://localhost:8080/api/updateAccount", elem).then((res) => {
             console.log(res)
             window.location.reload(true)
         })
@@ -53,7 +53,7 @@ export default function ViewAccount() {
     const showForm = (event, elem) => {
         event.preventDefault()
         document.getElementById("showForm").classList.remove("hidden")
-        axios.post("http://34.207.130.150:8000/api/findForm", { username: elem.username }).then((res) => {
+        axios.post("http://localhost:8080/api/findForm", { username: elem.username }).then((res) => {
             console.log(res)
             setForm(res.data)
         })
@@ -67,7 +67,7 @@ export default function ViewAccount() {
 
     const deleteAccount = (event, elem) => {
         event.preventDefault()
-        axios.delete("http://34.207.130.150:8000/api/deleteAccount", {
+        axios.delete("http://localhost:8080/api/deleteAccount", {
             data: {
                 username: elem.username
             }
