@@ -78,7 +78,7 @@ export default function Form() {
     const onSubmit = (e) => {
         e.preventDefault()
         console.log("submitting form")
-        axios.post("http://localhost:8080/api/submitForm", {
+        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/submitForm", {
             requests: requests,
             firstName: firstName,
             lastName: lastName,

@@ -43,7 +43,7 @@ export default function ViewAccount() {
             //mark
             elem.marked = true
         }
-        axios.post("http://localhost:8080/api/updateAccount", elem).then((res) => {
+        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/updateAccount", elem).then((res) => {
             console.log(res)
             window.location.reload(true)
         })
@@ -53,7 +53,7 @@ export default function ViewAccount() {
     const showForm = (event, elem) => {
         event.preventDefault()
         document.getElementById("showForm").classList.remove("hidden")
-        axios.post("http://localhost:8080/api/findForm", { username: elem.username }).then((res) => {
+        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/findForm", { username: elem.username }).then((res) => {
             console.log(res)
             setForm(res.data)
         })
@@ -67,7 +67,7 @@ export default function ViewAccount() {
 
     const deleteAccount = (event, elem) => {
         event.preventDefault()
-        axios.delete("http://localhost:8080/api/deleteAccount", {
+        axios.delete("https://chico-backend-857ad46e3125.herokuapp.com/api/deleteAccount", {
             data: {
                 username: elem.username
             }

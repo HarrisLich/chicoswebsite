@@ -15,7 +15,7 @@ export default function(){
 
     const onSubmit = (e)=>{
         e.preventDefault()
-        axios.post("http://localhost:8080/api/register", {username: username, password: password})
+        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/register", {username: username, password: password})
         closeRegister()
     }
 
