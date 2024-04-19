@@ -18,25 +18,29 @@ export default function () {
                     </button>
                 </div>
                 <div className="w-full items-center justify-center flex flex-col">
-                    <div className="font-bold md:text-4xl">Pricing</div>
-                    <div className="md:text-lg md:mt-6 mt-1">$65 for 2</div>
-                    <div className="md:text-lg md:mt-6 mt-1">$110 for 4</div>
-                    <div className="md:text-lg md:mt-6 mt-1">$5 off per refferal ($40 max)</div>
-
-                    <div className="md:text-lg md:mt-6 mt-1 md:px-10 text-sm px-4 font-bold border-b md:py-6 py-2">Your ids are in an imma try and get them to you as soon as possible, if you want it hand delievered to your front door it's 5 bucks but if you can pick up it's free. Lmk some times and places that could work for you and I'll see if they work for me. Totally find if you want to pick up someone else's as well.</div>
-                    <div className="md:text-lg md:mt-6 mt-1 md:px-10 px-4 text-sm font-bold border-b md:py-6 underline decoration-2 py-2">ALL PAYMENTS THAT ARENT SUBMITTED ON TIME WILL NOT GO ON THE ORDER UNLESS SPECIFICALLY TOLD OTHERWISE</div>
-                    <div className="mt-6 px-10 font-bold md:text-3xl md:py-6">Shipping</div>
-                    <div className="text-sm w-full items-center justify-center flex flex-col">
-                        <div>Shipping available for anywhere (House, PO Box, School)</div>
-                        <div>Fastest Shipping (1-3 Business Days)</div>
-                        <div>5$ per person</div>
-                        <div>Discrete packaging is an additional $3</div>
-                        <div>More than one ID can go in one shipment, but it is still-</div>
-                        <div>$5 per person</div>
-                    </div>
-
-
-
+                    <div className="font-bold md:text-4xl">Instructions</div>
+                    <div className="mt-2 w-full items-center justify-start px-6 text-xl font-bold border-t">Fill Out The Form</div>
+                    <div className="px-2 text-center text-xs md:text-base">Default IDs are PA/NJ, anything else needs to specially requested</div>
+                    <div className="px-2 text-center text-xs md:text-base">Make sure the city and the zip codes match (look up the city you picked)</div>
+                    <div className="px-2 text-center text-xs md:text-base">ID PHOTO (White back ground, good lightening minimal shadows on face, you want the entirety of your shoulders showing but not too low)</div>
+                    <div className="px-2 text-center text-xs md:text-base">SIGNATURE (White paper, use flash make sure there’s no glare, only one signature should be seen, BLACK PEN) Feel free to ask any questions</div>
+                    <div className="mt-2 w-full items-center text-xs md:text-base justify-start px-6 text-xl font-bold border-t">Add Referrals</div>
+                    <div className="px-2 text-center text-xs md:text-base">referral will be the name of their account on the website</div>
+                    <div className='px-2 text-center text-xs md:text-base'>Each referral takes 5 dollars off your order</div>
+                    <div className='px-2 text-center text-xs md:text-base'>Referrals will be verified by the website and by hand, if not put in through the website you will not get the discount</div>
+                    <div className="mt-2 w-full items-center justify-start px-6 text-xl font-bold border-t">Extra</div>
+                    <div className="px-2 text-center text-xs md:text-base">If there is an error message please screenshot and send to me so I can to continue to fix it.</div>
+                    <div className="w-full items-center justify-start px-6 text-xl font-bold border-t">Shipping</div>
+                    <div className="px-2 text-center text-xs md:text-base">Shipping available for all 50 States (House, P.O Box, School)</div>
+                    <div className="px-2 text-center text-xs md:text-base">Priority Mail (fastest shipping, 1-3 business days)</div>
+                    <div className="px-2 text-center text-xs md:text-base">$5 per person</div>
+                    <div className="px-2 text-center text-xs md:text-base">Discrete packaging is $3 more dollars</div>
+                    <div className="px-2 text-center text-xs md:text-base">More than one ID can go in one shipment, but it will still be 5 per person (eg. sisters need their id shipped to same address, both still pay 5)</div>
+                    <div className="px-2 text-center text-xs md:text-base">IF YOU NEED SHIPPING, YOU HAVE TO PAY BEFORE THE ORDER.</div>
+                    <div className="mt-2 w-full items-center justify-start px-6 text-xl font-bold border-t">Pick up/Drop off</div>
+                    <div className="px-2 text-center text-xs md:text-base">I will text you individually when IDs are done to coordinate time/place</div>
+                    <div className="px-2 text-center text-xs md:text-base">25 minute or less for pick up/drop off from Olney, MD</div>
+                    <div className="px-2 text-center text-xs md:text-base">Delivery is $5</div>
                 </div>
             </div>
         </div>
