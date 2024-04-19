@@ -11,7 +11,7 @@ export default function () {
 
     return (
         <div id="pricing" className="absolute hidden overflow-auto backdrop-blur-sm flex items-center justify-center w-full h-full">
-            <div className="md:w-[55rem] md:h-[55rem] font-[pt] w-[95%] h-[95%] bg-white rounded-lg relative md:py-[100px] py-[50px]">
+            <div className="md:w-[55rem] md:h-[55rem] font-[pt] w-[95%] h-[95%] bg-white rounded-lg relative md:py-[100px] py-[20px]">
                 <div className="absolute right-5 top-5 text-2xl transition-all duration-300 hover:text-red-600">
                     <button onClick={(e) => close(e)}>
                         <GiCancel />
