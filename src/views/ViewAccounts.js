@@ -14,7 +14,7 @@ export default function ViewAccount() {
     const [form, setForm] = React.useState(null)
 
     React.useEffect(() => {
-        axios.post("http://34.207.130.150:8000/api/accounts").then((res) => {
+        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/accounts").then((res) => {
             console.log(res.data)
             setAccounts(res.data)
         })
@@ -22,7 +22,7 @@ export default function ViewAccount() {
 
     const removeRefferal = (e, elem, event) => {
         event.preventDefault()
-        axios.delete("http://34.207.130.150:8000/api/deleteRefferal", {
+        axios.delete("https://chico-backend-857ad46e3125.herokuapp.com/api/deleteRefferal", {
             data: {
                 user: elem._id,
                 reffered: e
