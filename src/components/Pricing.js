@@ -17,7 +17,7 @@ export default function () {
                         <GiCancel />
                     </button>
                 </div>
-                <div className="w-full items-center justify-center flex flex-col">
+                <div className="w-full items-center justify-center flex flex-col overflow-auto">
                     <div className="font-bold md:text-4xl">Instructions</div>
                     <div className="mt-2 w-full items-center justify-start px-6 text-xl font-bold border-t">Fill Out The Form</div>
                     <div className="px-2 text-center text-xs md:text-base">Default IDs are PA/NJ, anything else needs to specially requested</div>

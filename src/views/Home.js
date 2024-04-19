@@ -70,7 +70,7 @@ export default function Home() {
                 <div className="left-5 absolute text-white top-5">
                     Logged in as: {user}
                 </div>
-                <div className="absolute rounded-full flex items-center justify-center text-center px-8 py-2 bg-white text-lg -translate-x-[50%] top-5 left-[50%] text-black">
+                <div className="absolute rounded-full flex items-center justify-center text-center text-xs md:text-base px-8 py-2 bg-white text-lg -translate-x-[50%] top-5 left-[50%] text-black">
                     Pricing: $65 for 2 | $110 for 4 | 1 is NOT an option
                 </div>
                 <div className="absolute text-white right-5 top-5">
