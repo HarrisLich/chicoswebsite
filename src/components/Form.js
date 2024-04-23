@@ -11,7 +11,7 @@ export default function Form() {
     const [cities, setCities] = React.useState(City.getCitiesOfState("US", "PA"))
     const [idPhoto, setIdPhoto] = React.useState(null)
     const [signature, setSignature] = React.useState(null)
-    const [requests, setRequests] = React.useState(null)
+    const [requests, setRequests] = React.useState("")
     const [firstName, setFirstName] = React.useState(null)
     const [lastName, setLastname] = React.useState(null)
     const [heightFt, setHeightFt] = React.useState(1)
@@ -58,7 +58,7 @@ export default function Form() {
         document.getElementById('payment').value = 'cash app'
         document.getElementById('signature').value = null
         document.getElementById('id').value = null
-        setRequests(null)
+        setRequests("")
         setFirstName(null)
         setLastname(null)
         setHeightFt(1)
