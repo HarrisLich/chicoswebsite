@@ -22,7 +22,8 @@ export default function ViewOrders() {
     const user = localStorage.getItem('token')
 
     React.useEffect(() => {
-        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/orders", {startIndex: 0}).then((res) => {
+        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/getorder", {startIndex: 0}).then((res) => {
+            console.log(res.data)
             setOrders(res.data)
         })
     }, [])
@@ -30,10 +31,10 @@ export default function ViewOrders() {
     const changeOrders = (e, dir) => {
         e.preventDefault()
         
-        if(dir === '<' && startIndex - 10 >= 0){
-            startIndex -= 10
+        if(dir === '<' && startIndex - 1 >= 0){
+            startIndex -= 1
         }else if(dir === '>'){
-            startIndex += 10
+            startIndex += 1
         }
         
         axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/orders", {startIndex: startIndex}).then((res)=>{
