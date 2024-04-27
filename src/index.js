@@ -15,20 +15,18 @@ const router = createBrowserRouter([
   },
   {
     path: "/accounts",
-    element: <ViewAccount/>
+    element: <ViewAccount />
   },
   {
     path: "/orders",
-    element: <ViewOrders/>
+    element: <ViewOrders />
   }
 
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </React.StrictMode>
+  <RouterProvider router={router}></RouterProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
