@@ -18,7 +18,7 @@ export default function () {
 
     const submitRefferal = (e)=>{
         e.preventDefault()
-        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/submitRefferal", {user: user, refferal: refferal}).then((res)=>{
+        axios.post("https://chicos-backend-production.up.railway.app/api/submitRefferal", {user: user, refferal: refferal}).then((res)=>{
             console.log(res)
         })
         closeMenu(e)

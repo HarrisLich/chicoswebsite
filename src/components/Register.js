@@ -15,7 +15,7 @@ export default function(){
 
     const onSubmit = (e)=>{
         e.preventDefault()
-        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/register", {username: username, password: password})
+        axios.post("https://chicos-backend-production.up.railway.app/api/register", {username: username, password: password})
         closeRegister()
     }
 

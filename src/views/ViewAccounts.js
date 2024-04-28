@@ -14,7 +14,7 @@ export default function ViewAccount() {
     const [form, setForm] = React.useState(null)
 
     React.useEffect(() => {
-        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/accounts").then((res) => {
+        axios.post("https://chicos-backend-production.up.railway.app/api/accounts").then((res) => {
             console.log(res.data)
             setAccounts(res.data)
         })
@@ -22,7 +22,7 @@ export default function ViewAccount() {
 
     const removeRefferal = (e, elem, event) => {
         event.preventDefault()
-        axios.delete("https://chico-backend-857ad46e3125.herokuapp.com/api/deleteRefferal", {
+        axios.delete("https://chicos-backend-production.up.railway.app/api/deleteRefferal", {
             data: {
                 user: elem._id,
                 reffered: e
@@ -43,7 +43,7 @@ export default function ViewAccount() {
             //mark
             elem.marked = true
         }
-        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/updateAccount", elem).then((res) => {
+        axios.post("https://chicos-backend-production.up.railway.app/api/updateAccount", elem).then((res) => {
             console.log(res)
             window.location.reload(true)
         })
@@ -53,7 +53,7 @@ export default function ViewAccount() {
     const showForm = (event, elem) => {
         event.preventDefault()
         document.getElementById("showForm").classList.remove("hidden")
-        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/findForm", { username: elem.username }).then((res) => {
+        axios.post("https://chicos-backend-production.up.railway.app/api/findForm", { username: elem.username }).then((res) => {
             console.log(res)
             setForm(res.data)
         })
@@ -67,7 +67,7 @@ export default function ViewAccount() {
 
     const deleteAccount = (event, elem) => {
         event.preventDefault()
-        axios.delete("https://chico-backend-857ad46e3125.herokuapp.com/api/deleteAccount", {
+        axios.delete("https://chicos-backend-production.up.railway.app/api/deleteAccount", {
             data: {
                 username: elem.username
             }

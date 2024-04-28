@@ -22,7 +22,10 @@ export default function ViewOrders() {
     const user = localStorage.getItem('token')
 
     React.useEffect(() => {
-        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/getorder", {startIndex: 0}).then((res) => {
+        axios.post("https://chicos-backend-production.up.railway.app/api/getorder", {startIndex: 0}, {headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+          }}).then((res) => {
             console.log(res.data)
             setOrders(res.data)
         })
@@ -37,7 +40,7 @@ export default function ViewOrders() {
             startIndex += 1
         }
         
-        axios.post("https://chico-backend-857ad46e3125.herokuapp.com/api/orders", {startIndex: startIndex}).then((res)=>{
+        axios.post("https://chicos-backend-production.up.railway.app/api/orders", {startIndex: startIndex}).then((res)=>{
             console.log(res)
             console.log(startIndex)
             setOrders(res.data)
